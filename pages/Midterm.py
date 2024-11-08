@@ -36,67 +36,39 @@ st.write("Problem - Predicting the outcome of NFL games is complex due to numero
 
 st.write("Motivation -  The motivation behind this project is to create a model that maximizes the excitement and entertainment value of NFL games by providing accurate score predictions. This can help fans and analysts better understand team performance trends and make better decisions on aspects like attendance and game expectations.")
 
-st.title("Potential Results and Discussion")
+st.title("Methods")
 
-
-st.header("Data Preprocessing Methods")
-
+st.header("Data Preprocessing Methods Implemented")
 st.write("""
-Data preprocessing is crucial for ensuring that the dataset is suitable for machine learning algorithms. Below are the identified methods:
-- **Feature Engineering**: Create new features like rivalry records, win streaks, and compute key statistics such as yards gained, yards allowed, and third down conversions.
-  
-- **Data Management**: Handle missing values using techniques like mean, median, and mode imputations. Also manage inconsistent data, duplicates, and data gaps.
-  
-- **Data Standardization**: Since different statistics are on different scales, apply techniques like min-max scaling and z-scores to standardize the data.
+    - **Missing Data Handling**: Filled missing values with the mean of numeric columns to maintain dataset integrity.
+    - **Feature Engineering**: 
+        - Created a new win column indicating if the away team won or lost.
+        - Converted possession times to total seconds for consistent numerical analysis.
+    - **Data Cleaning**: Removed duplicates to ensure each game is uniquely represented.
+    - **Feature Selection**: Retained key performance metrics for training the model.
+    """)
+st.header("ML Algorithms/Models Implemented")
+st.write("""
+    These are the ML algorithms we implemented for this midterm checkpoint. 
+    - **Logistic Regression (Supervised)**: 
+    - **K-Means Clustering (Unsupervised)**: 
 """)
 
-st.header("Machine Learning Algorithms")
 
-st.write("""
-Several machine learning models are proposed for this project, each selected based on their effectiveness in predicting NFL game outcomes:
 
-**Supervised Learning Algorithms (CS 4641 and CS 7641):**
-1. **Logistic Regression**: A simple yet effective algorithm for binary classification, such as win/loss predictions. It will serve as a baseline model.
-2. **K-Nearest Neighbors (K-NN)**: This classification algorithm will utilize proximity to neighbors and regression techniques to classify a data point.
-3. **Random Forest**: This ensemble method will aggregate the outcomes of multiple decision trees, improving classification performance and reducing overfitting.
 
-**Unsupervised Learning Algorithms (CS 7641):**
-1. **Hierarchical Clustering**: This bottom-up clustering approach merges similar points based on increasing differences, useful for discovering patterns in team performances.
-2. **K-Means Clustering**: Groups points into predefined clusters based on similarity, useful for grouping teams or players with similar attributes.
-3. **Density-Based Clustering**: Forms clusters based on proximity and density, ideal for identifying outliers in performance data.
-""")
-st.header("Justification for the Proposed Methods")
+st.title("Results and Discussion")
+st.header("Visualizations")
+st.write("These are our visualizations")
+st.header("Analysis of Quantitative Metrics:")
+st.header("Analysis of Algorithms/Models:")
+st.write("Comparative Analysis and Recommendations")
+st.write("Why did your model perform well?")
 
-st.write("""
-The proposed models are effective for the following reasons:
-- **Logistic Regression** provides a simple, interpretable model that can gauge the quality of other algorithms.
-- **K-NN** uses proximity-based classification, making it intuitive and efficient for small to medium datasets.
-- **Random Forest** can handle a large number of features and automatically capture complex interactions between them.
-  
-In unsupervised learning:
-- **Hierarchical Clustering** allows for flexible cluster formation without predetermining the number of clusters.
-- **K-Means Clustering** is fast and effective when the number of clusters is known.
-- **Density-Based Clustering** is well-suited to handle noisy data and find clusters of arbitrary shapes.
-""")
-st.header("Quantitative Metrics")
-st.write("""
-The performance of our models will be evaluated using the following metrics:
-1. **Accuracy**: Measures how often the model correctly predicts the winning team. A higher value (closer to 1) indicates better overall performance in predicting the correct outcome.
-2. **Precision**: Focuses on the ratio of correctly predicted wins to the total number of predicted wins. A higher precision means fewer false positives (incorrect win predictions).
-3. **F1 Score**: Balances precision and recall, giving insight into the model’s ability to avoid both false positives and false negatives. A higher F1 score indicates better balance between identifying wins and minimizing incorrect predictions.
-""")
-st.header("Project Goals")
-st.write("""
-- **Create an interpretable model** that provides accurate insights for NFL analysts and sports enthusiasts:
-    - **Accuracy > 0.7**
-    - **Precision > 0.75**
-    - **F1 Score > 0.75**
-- **Design an efficient model** that maximizes computational efficiency by using methods such as logistic regression and K-means clustering.
-""")
-st.header("Overall Expectation")
-st.write("""
-Achieve a reliable, interpretable, and accurate model for predicting which NFL team is likely to win a game.
-""")
+
+st.header("Next Steps")
+
+
 
 st.title("References")
 st.write("""

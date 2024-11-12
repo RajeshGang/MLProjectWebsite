@@ -48,10 +48,18 @@ st.write("""
     - **Feature Selection**: Retained key performance metrics for training the model.
     """)
 st.header("ML Algorithms/Models Implemented")
-st.write("""
-    These are the ML algorithms we implemented for this midterm checkpoint. 
-    - **Logistic Regression (Supervised)**: 
-    - **K-Means Clustering (Unsupervised)**: 
+# Logistic Regression
+st.subheader("Logistic Regression (Supervised)")
+st.markdown("""
+- **Reason for Selection**: Chosen for its simplicity and speed in training, making it an excellent baseline model for predicting binary outcomes (win/loss).
+- **Insights Provided**: Offers insights into feature importance and the type of relationships between features and game outcomes (e.g., positive or negative influences).
+""")
+
+# K-Means Clustering
+st.subheader("K-Means Clustering (Unsupervised)")
+st.markdown("""
+- **Reason for Selection**: Useful for identifying natural groupings in the dataset without prior labels, helping uncover hidden patterns in game data.
+- **Insights Provided**: Helps group games based on feature similarity, which can assist in understanding game patterns and trends.
 """)
 
 
@@ -59,14 +67,56 @@ st.write("""
 
 st.title("Results and Discussion")
 st.header("Visualizations")
-st.write("These are our visualizations")
+st.markdown("Here is a link to our visualizations: [Midterm Visualizations](https://mlfootballproject.streamlit.app/MidtermVisualizations)")
 st.header("Analysis of Quantitative Metrics:")
+st.subheader("Logistic Regression")
+st.markdown("""
+- **Accuracy (0.9000)**: This high value means that the model was able to correctly predict the outcome of the NFL match 90 percent of the time.
+- **Precision (0.8817)**: Among the games the model predicted as winners, 88.17 percent of them were actual winners, indicating relatively high precision.
+- **Recall (0.88)**: The model correctly identified 88 percent of actual winners from all the games, proving its effectiveness.
+- **F1-score (0.8823)**: The balance between precision and recall is 88.23 percent, showcasing great performance.
+""")
+
+# K-Means Metrics
+st.subheader("K-Means")
+st.markdown("""
+- **Accuracy (0.67)**: The clustering algorithm properly grouped similar outcomes 67 percent of the time, showing slightly above-average performance but room for improvement.
+- **Precision (0.61)**: Of the predicted clusters for winning teams, 61 percent were actual winners, indicating moderate results but needing improvement.
+- **Recall (0.68)**: The model successfully captured 68 percent of all actual winning team clusters.
+- **F1-score (0.64)**: The balance of precision and recall attained is 64 percent, indicating decent performance.
+""")
 st.header("Analysis of Algorithms/Models:")
-st.write("Comparative Analysis and Recommendations")
-st.write("Why did your model perform well?")
+st.subheader("Logistic Regression")
+st.markdown("""
+- **Description**: Logistic regression is a supervised learning model that applies a logistic function to classify a binary target variable, and it can be adapted for multiclass classification tasks.
+- **Mechanism**: It calculates probabilities using the logistic function, making it effective when a linear decision boundary exists between classes.
+- **Optimization**: The model’s coefficients are optimized to predict the log-odds of the target variable, assuming a linear relationship between the independent variables and the log-odds of the outcome.
+""")
+
+st.subheader("K-Means Clustering")
+st.markdown("""
+- **Description**: K-Means is an unsupervised learning algorithm used to partition data into a predefined number of clusters based on feature similarity.
+- **Mechanism**: It minimizes variance within clusters by iteratively assigning data points to the nearest cluster center, then updating the center based on the mean of assigned points.
+- **Stability**: The algorithm continues until cluster assignments stabilize, making it effective for finding natural groupings in data without prior labels.
+""")
+st.header("Comparative Analysis and Recommendations")
+st.markdown("""
+Both models produced verifiable results, with Logistic Regression having a slight edge over K-Means in terms of accuracy, precision, recall, and F1-score. The high values associated with Logistic Regression metrics suggest that it is well suited for predicting the winner of an NFL game based on the feature data provided.
+""")
+st.header("Why did your model perform well?")
+st.markdown("""
+- **Relevant Features**: The features used (passing yards, rushing yards, touchdowns, sacks, etc.) are good indicators of NFL teams’ success, allowing the models to make accurate predictions.
+- **Appropriate Model Choice**: Both models are resilient classifiers that effectively manage the variability and complexity within the dataset.
+""")
 
 
 st.header("Next Steps")
+st.markdown("""
+- **Hyperparameter Tuning**: Testing and tuning the model’s hyperparameters would optimize performance, ensuring an ideal balance of accuracy, recall, and precision.
+- **Feature Engineering**: Discovering and incorporating different features to enhance model accuracy and precision, such as including niche metrics.
+- **Explore Additional Models**: Testing other types of models to combine results, optimize outcomes, and identify specific methods for further improvements.
+""")
+
 
 
 
@@ -82,11 +132,11 @@ st.header("Team Contributions")
 data = {
     "Name": ["Ishaan", "Rahul", "Vishnu", "Rohan", "Sattwik"],
     "Proposal Contribution": [
-        "Literature review, Introduction,presentation slides, and problem and motivation",
-        "I made the gantt chart, the entire streamlit website, the streamlit repo, the presentation. came up with the project idea and worked on the problem.",
-        "Algorithms for supervised and unsupervised learning to classify data points into winning/losing, literature review",
-        "Results and Discussion, Video Recording, GitHub Setup",
-        "Data Preprocessing methods, presentation slides, problem, motivation",
+        "Visualizations, Results & Discussions",
+        "Gantt chart, Model Implementations, Data Preprocessing",
+        "Model Implementations, Data Preprocessing",
+        "Website, Data Preprocessing, Visualizations",
+        "Results & Discussions, Visualizations",
     ]
 }
 df = pd.DataFrame(data)

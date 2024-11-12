@@ -142,4 +142,5 @@ data = {
 df = pd.DataFrame(data)
 st.table(df)
 
-st.image("gantt.png", caption="Current Gantt Chart for Team", use_column_width=True)
+
+st.image("gantt2.png", caption="Current Gantt Chart for Team", use_column_width=True)

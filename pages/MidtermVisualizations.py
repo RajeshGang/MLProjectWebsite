@@ -6,10 +6,10 @@ current_dir = os.path.dirname(__file__)
 image1_path = os.path.join(current_dir, "../MLMV1.jpg")
 image2_path = os.path.join(current_dir, "../MLMV2.jpg")
 
-st.set_page_config(page_title="Midterm Visualizations")
+st.set_page_config(page_title="Final Visualizations")
 
-st.title("Midterm Visualizations")
-st.write("Here are our visualizations for the midterm.")
+st.title("Final Visualizations")
+st.write("Here are our visualizations for the Final.")
 
 # Display images
 st.image(image1_path, caption="Visualization 1", use_column_width=True)

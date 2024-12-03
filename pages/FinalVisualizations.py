@@ -8,10 +8,10 @@ image2_path = os.path.join(current_dir, "../MLV2.jpg")
 image3_path = os.path.join(current_dir, "../MLV3.jpg")
 
 
-st.set_page_config(page_title="Midterm Visualizations")
+st.set_page_config(page_title="Final Visualizations")
 
-st.title("Midterm Visualizations")
-st.write("Here are our visualizations for the midterm.")
+st.title("Final Visualizations")
+st.write("Here are our visualizations for the Final.")
 
 # Display images
 st.image(image1_path, caption="Logistic Regression Visualization", use_column_width=True)

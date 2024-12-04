@@ -127,12 +127,14 @@ st.markdown("""
 
 st.header("Comparative Analysis and Recommendations")
 st.markdown("""
-Both models produced verifiable results, with Logistic Regression having a slight edge over K-Means in terms of accuracy, precision, recall, and F1-score. The high values associated with Logistic Regression metrics suggest that it is well suited for predicting the winner of an NFL game based on the feature data provided.
+When comparing the 3 models, all of the models were able to output verifiable results based on the dataset, with logistic regression being better than K Means in terms of all conditions. The supervised learning models(Logistic Regression and Random Forest) proved to be a lot more fruitful than the unsupervised model(K-means clustering).  Logistic regression performed well due to the simplicity and effectiveness, while Random Forest, which was slightly less accurate, proved to be robust with datasets of non-linear relationships. The high values associated with accuracy, precision, recall, and F1-score suggest that the model is well suited for predicting the winner of an NFL game based on the feature data provided. Additionally, the Random Forest model also demonstrated exceptional performance, achieving strong metrics across all evaluation categories, which highlights its robustness and effectiveness as a predictive tool in this context. Its ensemble approach makes it a reliable choice for handling complex datasets and improving prediction accuracy. K-means on the other hand does not predict the outcomes but rather it adds value by grouping all of the NFL games based on feature similarity, and shows that certain game outcomes are associated with certain thresholds of turnovers or possession times. Overall, the 3 models worked together to provide a very descriptive analysis of our NFL games.
 """)
 st.header("Why did your model perform well?")
 st.markdown("""
 - **Relevant Features**: The features used (passing yards, rushing yards, touchdowns, sacks, etc.) are good indicators of NFL teams’ success, allowing the models to make accurate predictions.
 - **Appropriate Model Choice**: Both models are resilient classifiers that effectively manage the variability and complexity within the dataset.
+- **Overfitting**: Both models were able to handle overfitting by using regularization techniques (such as Lasso and Ridge regression) to prevent overfitting.
+- Preprocessing: Effective data preprocessing(handling missing values and feature engineering) made sure that the models were trained on clean and reliable data. 
 """)
 
 
@@ -141,6 +143,7 @@ st.markdown("""
 - **Hyperparameter Tuning**: Testing and tuning the model’s hyperparameters would optimize performance, ensuring an ideal balance of accuracy, recall, and precision.
 - **Feature Engineering**: Discover and incorporate different features to enhance model accuracy and precision, such as incorporating more niche metrics into our calculations.
 - **Explore Additional Models**: We could test out other types of models and compare and contrast with our model to combine results and see how we could optimize our results and identify specific methods to again improve our outcomes.
+- **Data Augmentation: Incorporate data (such as FanPlay app team at Georgia Tech) from more recent seasons to improve model generality and account for changes in team performances.
 """)
 
 
@@ -158,15 +161,15 @@ st.header("Team Contributions")
 data = {
     "Name": ["Ishaan", "Rahul", "Vishnu", "Rohan", "Sattwik"],
     "Proposal Contribution": [
-        "Visualizations, Results & Discussions",
-        "Gantt chart, Model Implementations, Data Preprocessing",
-        "Model Implementations, Data Preprocessing",
-        "Website, Data Preprocessing, Visualizations",
-        "Results & Discussions, Visualizations",
+        "Analysis of quantitative metrics, analysis of algorithm, Comparative analysis",
+        "Website, Final Presentation Video, Gantt Chart, Comparative Analysis",
+        "Final Presentation Slides, Model Implementation",
+        "Website, Model Implementation",
+        "Final Presentation Slides, Model Implementation, Results",
     ]
 }
 df = pd.DataFrame(data)
 st.table(df)
 
 
-st.image("gantt2.png", caption="Current Gantt Chart for Team", use_column_width=True)
+st.image("gantt3.png", caption="Current Gantt Chart for Team", use_column_width=True)
